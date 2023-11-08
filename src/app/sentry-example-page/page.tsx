@@ -2,18 +2,10 @@
 
 import Head from "next/head";
 import * as Sentry from "@sentry/nextjs";
-import ErrorBoundary from '@/components/error-boundary';
-import { useEffect } from 'react';
-
 
 export default function Page() {
-  // useEffect(() => {
-  //   throw new Error('Test')
-  // },[])
-
   return (
-    <ErrorBoundary>
-      <div>
+    <div>
       <Head>
         <title>Sentry Onboarding</title>
         <meta name="description" content="Test Sentry for your Next.js app!" />
@@ -57,7 +49,7 @@ export default function Page() {
             margin: "18px",
           }}
           onClick={ () => {
-            throw new Error("Sentry Example Frontend Error2222");
+            throw new Error("Sentry with good next.config.js Sentry Example Frontend Error2222");
           }}
         >
           Throw error!
@@ -75,6 +67,5 @@ export default function Page() {
         </p>
       </main>
     </div>
-    </ErrorBoundary>
   );
 }
